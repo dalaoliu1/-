@@ -1,0 +1,35 @@
+.header{
+    margin-top: -30px;
+    width: 100%;
+    background:url("./pic/风景2.jpg") ;
+    background-size:100%;
+    height: 3.6em;
+    text-align: center;
+    font-size: 50px  
+}
+.title{
+    padding-top: 20px;
+}
+
+.logo{
+    position: absolute;
+    transform: scaleX(0.6) scaleY(0.6) ;
+    margin-top: -160px;
+}
+.Button{
+    height: 400px;
+}
+.input{
+    width: 400px;
+    color: black;
+}
+.pitu{
+    position: absolute;
+    right: -75px;
+    margin-top:  -150px;;
+    transform: scaleX(0.5) scaleY(0.6) ;
+
+    
+}
+
+

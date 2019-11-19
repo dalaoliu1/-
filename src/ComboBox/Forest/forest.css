@@ -1,0 +1,19 @@
+.midden{
+    width: 60%;
+    margin-left: 20%;
+    text-align: center;
+    border: black 1px solid;
+    margin-top: 50px;
+}
+.title{
+    margin-top: 50px;
+}
+.gap{
+    margin-top: 50px;
+}
+.reture{
+    position: absolute;
+    margin-left: 390px;
+    margin-top: 55px;
+    font-size: 20px;
+}

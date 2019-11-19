@@ -1,0 +1,15 @@
+.login{
+    overflow:hidden	;
+    background: url("./../Header/pic/风景1.jpg") no-repeat;
+    float: left;
+    border:none;
+    width: 17%;
+    height: 180px;
+}
+.title{
+    text-align: center;
+}
+.picture{
+    margin-top: -30px;
+    transform: scaleX(0.8) scaleY(0.7) ;
+}

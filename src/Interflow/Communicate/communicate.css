@@ -1,0 +1,15 @@
+.Communicate{
+    background-color: white;
+    border: none;
+    height: 1000px;
+    padding-left: 5px;
+    margin-left: 20%;
+    width: 65% ;
+    overflow: scroll;
+}
+.title{
+    text-align: center;
+}
+.color{
+    background-color: rgb(214, 241, 248);
+}

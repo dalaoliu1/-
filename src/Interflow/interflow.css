@@ -1,0 +1,14 @@
+.interflow{
+    float: left;
+    margin-left: 20%;
+    padding-left: 10px;
+    width: 60%;
+    height: 400px;
+    border: pink 1px solid;
+    background-color:white;
+
+}
+.icon{
+    float: right;    
+    margin-right: 20%; 
+}

@@ -1,0 +1,22 @@
+.login{
+    height: 1000px;
+    font-size: 20px;
+    padding-top: 7%;
+    text-align: center;
+    margin-left: 25%;
+    width: 50%;
+    height: 500px;
+    
+}
+.title{
+    font-size: 50px;
+}
+.one{
+    margin-top:20px;
+}
+.yes{
+    background: url(./pic/register1.jpg) no-repeat ;
+    background-size: cover; 
+    height: 1100px;
+  
+}

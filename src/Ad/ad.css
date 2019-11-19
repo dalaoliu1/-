@@ -1,0 +1,12 @@
+.ad{
+    margin-left:3%;
+    float: left;
+    width: 17%;
+    height:180px;
+    border:none;
+    background-color:beige;
+}
+.icon{
+    padding-top: 30px;
+    float: right;
+}

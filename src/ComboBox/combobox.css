@@ -1,0 +1,18 @@
+.Button{
+    float: left;
+    margin-left: 5.5%;
+}
+.all{
+    background-color:white;
+    padding-top:15px;
+    float: left;
+    border: pink 1px solid;
+    border-top:none;
+    height: 60px;
+    width: 60%;
+    text-align: center;
+    margin-left: 20%
+    
+
+    
+}

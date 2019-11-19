@@ -1,0 +1,28 @@
+.title{
+    text-align: center;
+    font-size: 30px;
+}
+.article{
+    width: 60%;
+    height: 220px;
+    margin-left: 20%;
+    border:black 1px solid;
+    text-indent: 2em;
+    margin-top:4px;
+}
+.p{
+    font-size: 17px
+}
+
+.author{
+    margin-left: 940px;
+    font-size:  14px;
+}
+.time{
+    font-size: 14px;
+    margin-left: 890px;
+}
+.Tabs{
+    text-align: center;
+    border-left: 500px;
+}
