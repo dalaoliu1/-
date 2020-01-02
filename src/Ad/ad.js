@@ -83,7 +83,6 @@ export default class Ad extends React.Component{
             <Link to="/News"><div className={AdCss.icon}> <Button  shape="round" size="middle" >
                更多
                 <Icon type="double-right"></Icon>
-                <Button onClick={this.upload}>  修改</Button>
             </Button></div></Link>     
         </div>
          )
