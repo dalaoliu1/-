@@ -1,12 +1,58 @@
 import React from 'react';
-import {Menu,Icon,Button,Input} from 'antd';
-import img from './../../Header/pic/tig.jpg'
+import {Menu,Icon,Button,Input,message} from 'antd';
+import img from './../../Header/pic/tig.jpg';
+import {axios} from "axios";
 var PersonalCss =require('./personal.css');
 const{SubMenu}=Menu;
 export default class Personal extends React.Component{
     handleClick = e => {
         console.log('click ', e);
       };
+      constructor(props){
+        super(props)
+       this.state={
+       }
+    }
+    changeValue=(e)=>{
+        this.setState({
+            [e.target.name]:e.target.value
+        })
+      }
+      upload=()=>{
+        var data={
+        "username":this.state.username,
+        "phone":this.state.phone,
+        "email":this.state.email,
+        "sigtnature":this.state.signature,
+        }
+        axios.post({
+          url:"/user/personal",
+          data:JSON.stringify(data)
+        }).then(Response=>Response.JSON())
+        .then(result=>{
+            if(result.state=1){
+                message.info("个人信息以修改")
+            }else if(result.state==2){
+                message.info("个人信息未修改成功")
+            }
+        }).catch(e=>{
+            message.error(e);
+        })
+        axios.post({
+          url:"/user/personal",
+          data:JSON.stringify(data)
+        }).then(Response=>Response.JSON())
+        .then(result=>{
+            if(result.state==5){
+                message.info("个人信息以删除")
+            }else if(result.state==6){
+                message.info("个人信息未删除")
+            }
+        }).catch(e=>{
+            message.error(e);
+        })
+      }
+    
     render(){
         return(
             <div>
@@ -29,7 +75,7 @@ export default class Personal extends React.Component{
           }
         >
           <Menu.ItemGroup key="g1" title="Item 1" >
-            <Menu.Item key="1"className={PersonalCss.leftword}>个人资料</Menu.Item>
+            <Menu.Item key="1"className={PersonalCss.leftword} >个人资料</Menu.Item>
             <Menu.Item key="2" className={PersonalCss.leftword}>收藏</Menu.Item>
           </Menu.ItemGroup>
           <Menu.ItemGroup key="g2" title="Item 2">
@@ -69,19 +115,19 @@ export default class Personal extends React.Component{
         </SubMenu>
       </Menu>
        </div>
-           <div className={PersonalCss.kown}>昵称:<Input id="" ></Input>
+           <div className={PersonalCss.kown}name="username" value={this.state.username} onChange={e=>this.changeValue(e)}>昵称:<Input id="" ></Input>
             头像上传:
             <img src={img} alt="" className={PersonalCss.pic}></img>
             <Button>
             <Icon type="upload" /> Click to Upload
            </Button>
-           <div className={PersonalCss.font}>
+           <div className={PersonalCss.font}name="phone" value={this.state.phone} onChange={e=>this.changeValue(e)}>
                电话号码:<Input id="" width="10px"></Input> 
                </div>
-            <div className={PersonalCss.font}>
+            <div className={PersonalCss.font}name="email" value={this.state.email} onChange={e=>this.changeValue(e)}>
                邮箱:<Input id="" ></Input>
                </div>
-               <div className={PersonalCss.font}>
+               <div className={PersonalCss.font} name="signature" value={this.state.signature} onChange={e=>this.changeValue(e)}>
                个人签名:<Input id="" ></Input>
                </div>
            </div>
