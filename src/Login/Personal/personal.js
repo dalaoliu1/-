@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Menu,Icon,Button,Input, message} from 'antd';
 import img from './../../Header/pic/tig.jpg'
 import Axios from 'axios';
@@ -32,9 +32,9 @@ export default class Personal extends React.Component{
        url:"/introduce/create",
        data:JSON.stringify(data)
      }).then(result =>{
-       if(result.state==2){
+       if(result.state===2){
          message.info("修改失败")
-       }else if(result.state==1){
+       }else if(result.state===1){
          message.info("修改成功")
        }
      })
@@ -57,10 +57,11 @@ export default class Personal extends React.Component{
       url:"/introduce/update",
       data:JSON.stringify(data)
     }).then(result =>{
-      if(result.state==2){
+      if(result.state===2){
         message.info("修改失败")
-      }else if(result.state==1){
+      }else if(result.state===1){
         message.info("修改成功")
+        
       }
     })
   }
