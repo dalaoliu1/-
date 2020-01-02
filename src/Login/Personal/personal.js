@@ -88,7 +88,7 @@ export default class Personal extends React.Component{
           }
         >
           <Menu.ItemGroup key="g1" title="Item 1" >
-            <Menu.Item key="1"className={PersonalCss.leftword}>个人资料</Menu.Item>
+            <Menu.Item key="1"className={PersonalCss.leftword} >个人资料</Menu.Item>
             <Menu.Item key="2" className={PersonalCss.leftword}>收藏</Menu.Item>
           </Menu.ItemGroup>
           <Menu.ItemGroup key="g2" title="Item 2">
